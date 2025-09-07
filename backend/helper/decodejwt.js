@@ -15,7 +15,7 @@ const Auth = (req, res, next) => {
       return res.status(401).json({ message: "Invalid token format" });
     }
 
-    jwt.verify(token, process.env.Secret_Key, (err, decoded) => {
+    jwt.verify(token, process.env.SECKRET_KEY, (err, decoded) => {
       if (err) {
         console.log(err);
         return res.status(403).json({ message: "Token is not valid" });
