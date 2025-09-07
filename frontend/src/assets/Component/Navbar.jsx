@@ -49,7 +49,7 @@ export default function Navbar() {
           to="/addCategory"
           className="hover:text-yellow-400 transition-colors duration-200"
         >
-       Add Product
+       Add Category
         </Link>
         <button
           onClick={handleLogout}
