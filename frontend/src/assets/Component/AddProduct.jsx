@@ -20,7 +20,7 @@ export default function AddProduct() {
     const fetchCategories = async () => {
         if(token){
       try {
-        const res = await fetch("http://localhost:4000/category",{
+        const res = await fetch("https://e-commerce-pmns.vercel.app/category",{
             method:"GET",
             headers:{
                 "Authorization":"Bearer "+token,
@@ -53,7 +53,7 @@ export default function AddProduct() {
       formData.append("description", data.description || "");
       formData.append("category", data.category);
       formData.append("image", data.image[0]);
-      const res = await fetch("http://localhost:4000/product", {
+      const res = await fetch("https://e-commerce-pmns.vercel.app/product", {
         method: "POST",
         body:formData,
         

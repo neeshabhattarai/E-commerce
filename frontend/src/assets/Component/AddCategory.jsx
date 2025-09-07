@@ -13,7 +13,7 @@ export default function AddCategory() {
 
   const onSubmit = async (data) => {
     try {
-      const res = await fetch("http://localhost:4000/category", {
+      const res = await fetch("https://e-commerce-pmns.vercel.app/category", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

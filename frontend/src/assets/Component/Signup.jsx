@@ -12,7 +12,7 @@ export default function Signup() {
 
   const onSubmit = async (data) => {
     try {
-      const res = await fetch("http://localhost:4000/user/", {
+      const res = await fetch("https://e-commerce-pmns.vercel.app/user/", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

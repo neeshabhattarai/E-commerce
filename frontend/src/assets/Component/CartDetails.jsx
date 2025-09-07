@@ -13,7 +13,7 @@ export default function CartDetails() {
     if (token) {
       const fetchCart = async () => {
         try {
-          const res = await fetch("http://localhost:4000/cart", {
+          const res = await fetch("https://e-commerce-pmns.vercel.app/cart", {
             headers: { "Authorization": "Bearer " + token }
           });
           if (res.ok) {
@@ -37,7 +37,7 @@ export default function CartDetails() {
   const handleDelete = async (id) => {
     console.log("Deleting item", id);
     try {
-      const res = await fetch(`http://localhost:4000/cart/${id}`, {
+      const res = await fetch(`https://e-commerce-pmns.vercel.app/cart/${id}`, {
         method: "DELETE",
         headers: { "Authorization": "Bearer " + token }
       });
@@ -62,7 +62,7 @@ export default function CartDetails() {
 
     console.log("Updating item", id, "to quantity", newQuantity);
     try {
-      const res = await fetch(`http://localhost:4000/cart/${id}`, {
+      const res = await fetch(`https://e-commerce-pmns.vercel.app/cart/${id}`, {
         method: "PUT",
         headers: {
           "Authorization": "Bearer " + token,

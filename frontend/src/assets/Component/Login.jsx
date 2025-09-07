@@ -16,7 +16,7 @@ const navigate=useNavigate();
 const{tokenAdder,token}=
 useContext(AuthContext);
  const onSubmit =async (data) => {
-   await fetch("http://localhost:4000/user/login",{
+   await fetch("https://e-commerce-pmns.vercel.app/user/login",{
     method:"POST",
     body:JSON.stringify(data),
     headers:{

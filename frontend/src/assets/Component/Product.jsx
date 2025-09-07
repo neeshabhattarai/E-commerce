@@ -22,7 +22,7 @@ export default function Product() {
         Object.fromEntries(Object.entries(filters).filter(([_, v]) => v !== ""))
       ).toString();
 
-      const res = await fetch("http://localhost:4000/product?" + query, {
+      const res = await fetch("https://e-commerce-pmns.vercel.app/product?" + query, {
         method: "GET",
         headers: { Authorization: "Bearer " + token },
       });
@@ -74,7 +74,7 @@ export default function Product() {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/cart/", {
+      const res = await fetch("https://e-commerce-pmns.vercel.app/cart/", {
         method: "POST",
         body: JSON.stringify({ _id, count }),
         headers: {
