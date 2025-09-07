@@ -149,7 +149,7 @@ export default function Product() {
           <h2 className="text-xl mb-3">No products found</h2>
           <button
             onClick={() => navigate("/addproduct")}
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+            className="!bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
           >
             Add Product
           </button>
