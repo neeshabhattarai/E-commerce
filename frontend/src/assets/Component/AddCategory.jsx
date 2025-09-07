@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "./AuthPage";
+import { useNavigate } from "react-router-dom";
 
 export default function AddCategory() {
   const {
@@ -10,6 +11,7 @@ export default function AddCategory() {
     reset,
   } = useForm();
   const {token}=useContext(AuthContext);
+  const navigate=useNavigate()
 
   const onSubmit = async (data) => {
     try {
@@ -25,6 +27,7 @@ export default function AddCategory() {
       if (res.ok) {
         alert("✅ Category added successfully!");
         reset();
+        navigate("/addproduct")
       } else {
         alert("❌ Failed to add category!");
       }

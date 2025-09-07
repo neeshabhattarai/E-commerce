@@ -65,6 +65,7 @@ export default function AddProduct() {
 
       if (res.ok) {
         alert("✅ Product added successfully!");
+        navigate("/product")
       } else {
         alert("❌ Failed to add product!");
       }
